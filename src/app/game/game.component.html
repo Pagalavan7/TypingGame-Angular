@@ -1,0 +1,25 @@
+<div class="card text-center">
+  <div class="card-body">
+    <h2 class="mb-2">Typing Challenge</h2>
+    <hr />
+    <p [innerText]="paragraphText"></p>
+    <div class="mb-3">
+      <input
+        (input)="onInput($event.target!)"
+        type="email"
+        class="form-control mt-3"
+        id="exampleFormControlInput1"
+        placeholder="Type and practice here"
+      />
+    </div>
+  </div>
+  <div>
+    <button
+      *ngIf="paragraphText === InputText"
+      type="button"
+      class="btn btn-success w-fit-contetn mx-auto mb-3"
+    >
+      Great Job !
+    </button>
+  </div>
+</div>
